@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moduł 4 Kantor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/section.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+</head>
+<body class="body">
+    <main>
+        <section class="section">
+            <form class="form js-form">
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">
+                        Kantor walut &#128177;
+                    </legend>
+                    <div class="form__container">
+                        <label class="form__label">
+                            Kwota*:
+                            <input class="form__input js-inputAmount" type="number" min="1" step="any" name="inputAmount" placeholder="100" required>
+                            <select class="js-selectCurrency"  name="selectCurrency">
+                                <option value="pln">PLN</option>
+                                <option value="usd">USD</option>
+                                <option value="gbp">GPB</option>
+                                <option value="eur">EUR</option>
+                                <option value="chf">CHF</option>
+                            </select>
+                        </label>
+                        <p>* - pole wymagane</p>
+                    </div>
+                    <div class="form__container">
+                        <p>Wybierz walutę docelową:</p>
+                        <ul class="form__list">
+                            <li class="form__listItem">
+                                <label class="form__label">
+                                    <input class="js-pln" type="radio" value="PLN" name="radio"> PLN
+                                </label>
+                            </li>
+                            <li class="form__listItem">
+                                <label class="form__label">
+                                    <input class="js-usd" type="radio" value="USD" name="radio" checked> USD
+                                </label>
+                            </li>
+                            <li class="form__listItem">
+                                <label class="form__label">
+                                    <input class="js-gbp" type="radio" value="GBP" name="radio"> GBP
+                                </label>
+                            </li>
+                            <li class="form__listItem">
+                                <label class="form__label">
+                                    <input class="js-eur" type="radio" value="EUR" name="radio"> EUR
+                                </label>
+                            </li>
+                            <li class="form__listItem">
+                                <label class="form__label">
+                                    <input class="js-chf" type="radio" value="CHF" name="radio"> CHF
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </fieldset>
+                <div class="form__container">
+                    <button class="form__button js-form__button" type="submit">przelicz</button>
+                </div>
+            </form>
+            <p class="section__paragraph">Otrzymasz: <span class="section__value js-section__value"></span> <span class="section__currency js-section__currency"></span></p>
+        </section>
+    </main>
+</body>
+</html>

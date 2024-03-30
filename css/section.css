@@ -1,0 +1,19 @@
+.section {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.section__paragraph {
+    margin: 15px auto 0;
+    max-width: 450px;
+}
+
+.section__value {
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-decoration: underline;
+}
+
+.section__currency {
+    text-transform: uppercase;
+}
