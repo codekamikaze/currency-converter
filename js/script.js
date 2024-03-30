@@ -1,13 +1,20 @@
 const formElement = document.querySelector(".js-form");
+let newCurrenty;
 
 formElement.addEventListener("submit", (event) => {
     event.preventDefault();
     const inputAmountElement = document.querySelector(".js-inputAmount").value;
     const selectCurrencyElement = document.querySelector(".js-selectCurrency").value;
-    count(inputAmountElement, selectCurrencyElement);
+
+    const sectionValueElement = document.querySelector(".js-section__value");
+    const sectionCurrencyElement = document.querySelector(".js-section__currency");
+    sectionValueElement.innerText = count(inputAmountElement, selectCurrencyElement).toFixed(2);
+    sectionCurrencyElement.innerText = newCurrenty;
 });
 
-function count(inputAmountElement, selectCurrencyElement) {
+
+
+const count = (inputAmountElement, selectCurrencyElement) => {
     const plnElement = document.querySelector(".js-pln");
     const usdElement = document.querySelector(".js-usd");
     const gbpElement = document.querySelector(".js-gbp");
@@ -20,7 +27,7 @@ function count(inputAmountElement, selectCurrencyElement) {
     const currencyCHF = 4.41;
 
     let result;
-    let newCurrenty;
+    
     if(plnElement.checked) {
         newCurrenty = plnElement.value;
         switch(selectCurrencyElement) {
@@ -117,8 +124,5 @@ function count(inputAmountElement, selectCurrencyElement) {
                 break;
         }
     }
-    const sectionValueElement = document.querySelector(".js-section__value");
-    const sectionCurrencyElement = document.querySelector(".js-section__currency");
-    sectionValueElement.innerText = result.toFixed(2);
-    sectionCurrencyElement.innerText = newCurrenty;
+    return result;
 }
