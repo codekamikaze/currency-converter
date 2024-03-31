@@ -86,7 +86,6 @@
                     return result = +inputAmountElement;
             }
         }
-        return result;
     }
 
     const init = () => {
