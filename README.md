@@ -10,7 +10,7 @@ https://codekamikaze.github.io/currency-converter/
 ## Technologies
 The project was created using the following technologies:
 - HTML
-- CSS
+- CSS - BEM
 - JavaScript
 
 
